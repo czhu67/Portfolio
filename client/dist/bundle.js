@@ -20,11 +20,10 @@ var About = function About() {
     className: "frame"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "ABOUT ME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (__webpack_require__(/*! ../assets/biophoto.jpg */ "./client/src/assets/biophoto.jpg")["default"]),
-    width: "40%",
     className: "biopic"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "bio"
-  }, "Hi! I'm Caitlin Zhu, and I'm a full-stack developer who loves problem-solving and creating solutions that positively impact lives.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "I first found my love of coding at the University of Texas in Austin, where I dipped my toe into the Computer Science pool and earned my Elements of Computing Certificate. I loved it so much that upon graduation, I spent the next 6 months diligently exploring and growing my skills. Currently, my interests lie in front-end/web development and UI/UX.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "In my free time, you'll find me whipping up mouthwatering baked goods or crafting a new DIY project."));
+  }, "Hi! I'm Caitlin Zhu, and I'm a full-stack developer who loves problem-solving and creating solutions that positively impact lives.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "I first found my love of coding at the University of Texas in Austin, where I dipped my toe into the Computer Science pool and earned my Elements of Computing Certificate. I loved it so much that upon graduation, I spent the next 6 months diligently exploring and growing my skills. Currently, my interests lie in front-end web development and UI/UX.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "In my free time, you'll find me whipping up mouthwatering baked goods or crafting a new DIY project."));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
@@ -155,35 +154,68 @@ var Projects = function Projects() {
     id: "projects",
     className: "frame"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "PROJECTS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "celebwcait"
+    id: "celebwcait",
+    className: "project"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://celebratewcait.herokuapp.com/",
     target: "_blank",
     className: "project"
-  }, "Celebrate With Cait"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, "Celebrate With Cait"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "description"
+  }, "This is an ongoing personal project that I created to help with wedding planning logistics. It includes 3 main pages created using JavaScript, React, Webpack, and Sass. Some noteable features include the wedding day countdown, the budget \"progress\" bar, and the editable sticky-notes. In the future, I plan to implement authentication and connect a database so users can log in, use the app, and the data from the session can be saved for future sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (__webpack_require__(/*! ../assets/celebwcait1.png */ "./client/src/assets/celebwcait1.png")["default"]),
-    width: "50%"
+    className: "demo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (__webpack_require__(/*! ../assets/celebwcait2.png */ "./client/src/assets/celebwcait2.png")["default"]),
-    width: "50%"
+    className: "demo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (__webpack_require__(/*! ../assets/celebwcait3.png */ "./client/src/assets/celebwcait3.png")["default"]),
-    width: "50%"
+    className: "demo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "martell"
+    id: "martell",
+    className: "project"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://github.com/RFCE2209-House-Martell/je-m-appelle-martell/",
     target: "_blank",
     className: "project"
-  }, "Je M'appelle Martell"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "bell"
+  }, "Je M'appelle Martell"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "description"
+  }, "Je M'appelle Martell is an e-commerce web application integrated with an existing RESTful API. My team of 4 broke the website down into 4 main components, and I took responsibility of the Overview section (pictured). This project involved sending GET/POST requests to the API using Axios, React Hooks, and CSS. I was particularly proud of implementing the zoom view, where users could click the image for a pop-up magnifying class. We operated on daily stand-up meetings and 2-day sprints, ultimately completing this front-end project in 2-3 weeks."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (__webpack_require__(/*! ../assets/martell1.png */ "./client/src/assets/martell1.png")["default"]),
+    className: "demo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (__webpack_require__(/*! ../assets/martell2.png */ "./client/src/assets/martell2.png")["default"]),
+    className: "demo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "watermelon",
+    className: "watermelon project"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://caitlinzhu.itch.io/watermeloncatch",
+    target: "_blank",
+    className: "project"
+  }, "Watermelon Catch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "description"
+  }, "Watermelon Catch is a single-player game, where the goal is to catch as many watermelons as you can before time runs out. This game was created using Phaser and HTML, and features sprite animations and multiple scenes."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (__webpack_require__(/*! ../assets/watermelonCatch1.png */ "./client/src/assets/watermelonCatch1.png")["default"]),
+    className: "demo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (__webpack_require__(/*! ../assets/watermelonCatch2.png */ "./client/src/assets/watermelonCatch2.png")["default"]),
+    className: "demo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (__webpack_require__(/*! ../assets/watermelonCatch3.png */ "./client/src/assets/watermelonCatch3.png")["default"]),
+    className: "demo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "bell",
+    className: "project"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://www.bellflight.com/support/mybell",
     target: "_blank",
     className: "project"
-  }, "MyBell Customer Portal Landing Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, "MyBell Customer Portal Landing Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "description"
+  }, "This was a non-technical UI design done during my internship at Bell. I collaborated with an IT team member to create a layout for their customer portal and implement Google Analytics tracking for the page."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (__webpack_require__(/*! ../assets/mybell1.png */ "./client/src/assets/mybell1.png")["default"]),
-    width: "50%"
+    className: "demo"
   })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Projects);
@@ -8844,7 +8876,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  scroll-behavior: smooth;\n  background-image: url(\"https://i.ibb.co/b5yJFGp/background.png\");\n  background-size: cover;\n  font-size: 20px;\n}\n\nbody {\n  font-family: \"Didact Gothic\", sans-serif;\n}\n\n#header {\n  position: fixed;\n  background-color: black;\n  width: 100%;\n  height: 50px;\n  top: 0;\n  left: 0;\n  display: grid;\n  grid-template-columns: auto 100px 100px 100px 60px 70px;\n  padding: 10px;\n  color: white;\n  z-index: 1;\n  align-items: center;\n  padding: 8px;\n}\n\n.headerTitle {\n  margin-left: 25px;\n  display: flex;\n  align-items: end;\n  width: fit-content;\n}\n\n.frame {\n  height: auto;\n  min-height: calc(100vh - 270px);\n  margin-left: 70px;\n  padding: 100px;\n  position: relative;\n  transform: translateY(150px);\n  opacity: 0;\n  transition: 1s all ease;\n  overflow: hidden;\n}\n\n.frame.active {\n  transform: translateY(0);\n  opacity: 1;\n}\n\n.pageTracker {\n  position: fixed;\n  width: 10px;\n  top: 43%;\n  left: 30px;\n}\n\n.tracker {\n  border: 1px solid black;\n  margin-top: 12px;\n  height: 8px;\n  width: 8px;\n  transform: rotate(45deg);\n  transition: transform 0.3s ease-in-out;\n}\n\n.tracker:hover {\n  transform: rotate(45deg) scale(1.5);\n}\n\n#title.frame {\n  transform: translateY(0);\n}\n\n#title {\n  margin-top: 70px;\n}\n\nh1 {\n  font-size: 130px;\n}\n\nh2 {\n  font-size: 80px;\n  width: fit-content;\n  margin: 0;\n}\n\n.bio {\n  width: 50vw;\n  margin-top: 30px;\n}\n\n.biopic {\n  float: right;\n  margin: -80px 0 0 80px;\n}\n\nh1#name, #welcome {\n  animation: 2s floatUp ease-out;\n}\n\n@keyframes floatUp {\n  0% {\n    opacity: 0;\n    transform: translateY(150px);\n  }\n  20% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n  100% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n}\n#welcome {\n  float: right;\n  font-size: 30px;\n  padding-right: 100px;\n}\n\na.project:link {\n  font-size: 30px;\n}\n\n#contact.frame {\n  margin-bottom: 50px;\n}\n\n.card {\n  display: grid;\n  grid-template-columns: 30px auto;\n  gap: 10px;\n  margin-top: 70px;\n}\n\na:link {\n  color: black;\n  text-decoration: none;\n}\n\na:visited {\n  color: black;\n}\n\na:hover {\n  color: dimgray;\n}\n\n#footer {\n  position: absolute;\n  bottom: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n/*# sourceMappingURL=styles.css.map */\n", "",{"version":3,"sources":["webpack://./client/src/style/styles.scss","webpack://./client/src/style/styles.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,gEAAA;EACA,sBAAA;EACA,eAAA;ACCF;;ADEA;EACE,wCAAA;ACCF;;ADEA;EACE,eAAA;EACA,uBAAA;EACA,WAAA;EACA,YAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,uDAAA;EACA,aAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,YAAA;ACCF;;ADEA;EACE,iBAAA;EACA,aAAA;EACA,gBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,YAAA;EACA,+BAAA;EACA,iBAAA;EACA,cAAA;EACA,kBAAA;EACA,4BAAA;EACA,UAAA;EACA,uBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,wBAAA;EACA,UAAA;ACCF;;ADEA;EACE,eAAA;EACA,WAAA;EACA,QAAA;EACA,UAAA;ACCF;;ADEA;EACE,uBAAA;EACA,gBAAA;EACA,WAAA;EACA,UAAA;EACA,wBAAA;EACA,sCAAA;ACCF;;ADEA;EACE,mCAAA;ACCF;;ADEA;EACE,wBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,eAAA;EACA,kBAAA;EACA,SAAA;ACCF;;ADEA;EACE,WAAA;EACA,gBAAA;ACCF;;ADEA;EACE,YAAA;EACA,sBAAA;ACCF;;ADEA;EACE,8BAAA;ACCF;;ADEA;EACE;IACE,UAAA;IACA,4BAAA;ECCF;EDCA;IACE,UAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;AACF;ADEA;EACE,YAAA;EACA,eAAA;EACA,oBAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,mBAAA;ACAF;;ADGA;EACE,aAAA;EACA,gCAAA;EACA,SAAA;EACA,gBAAA;ACAF;;ADGA;EACE,YAAA;EACA,qBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,cAAA;ACAF;;ADGA;EACE,kBAAA;EACA,SAAA;EACA,cAAA;EACA,kBAAA;EACA,eAAA;ACAF;;AAEA,qCAAqC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  scroll-behavior: smooth;\n  background-image: url(\"https://i.ibb.co/b5yJFGp/background.png\");\n  background-size: cover;\n  font-size: 20px;\n}\n\nbody {\n  font-family: \"Didact Gothic\", sans-serif;\n}\n\n#header {\n  position: fixed;\n  background-color: black;\n  width: 100%;\n  height: 50px;\n  top: 0;\n  left: 0;\n  display: grid;\n  grid-template-columns: auto 100px 100px 100px 60px 70px;\n  padding: 10px;\n  color: white;\n  z-index: 1;\n  align-items: center;\n  padding: 8px;\n}\n\n.headerTitle {\n  margin-left: 25px;\n  display: flex;\n  align-items: end;\n  width: fit-content;\n}\n\n.frame {\n  height: auto;\n  min-height: calc(100vh - 270px);\n  margin-left: 70px;\n  padding: 100px;\n  position: relative;\n  transform: translateY(150px);\n  opacity: 0;\n  transition: 1s all ease;\n  overflow: hidden;\n}\n\n.frame.active {\n  transform: translateY(0);\n  opacity: 1;\n}\n\n.pageTracker {\n  position: fixed;\n  width: 10px;\n  top: 43%;\n  left: 30px;\n}\n\n.tracker {\n  border: 1px solid black;\n  margin-top: 12px;\n  height: 8px;\n  width: 8px;\n  transform: rotate(45deg);\n  transition: transform 0.3s ease-in-out;\n}\n\n.tracker:hover {\n  transform: rotate(45deg) scale(1.5);\n}\n\n#title.frame {\n  transform: translateY(0);\n}\n\n#title {\n  margin-top: 70px;\n}\n\nh1 {\n  font-size: 130px;\n}\n\nh2 {\n  font-size: 80px;\n  width: fit-content;\n  margin: 0;\n}\n\n.bio {\n  width: 50vw;\n  margin-top: 30px;\n}\n\n.biopic {\n  float: right;\n  margin: -80px 0 0 80px;\n  max-height: 70vh;\n}\n\nh1#name, #welcome {\n  animation: 2s floatUp ease-out;\n}\n\n@keyframes floatUp {\n  0% {\n    opacity: 0;\n    transform: translateY(150px);\n  }\n  20% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n  100% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n}\n#welcome {\n  float: right;\n  font-size: 30px;\n  padding-right: 100px;\n}\n\na.project:link {\n  font-size: 30px;\n}\n\n.project {\n  margin-top: 30px;\n  margin-bottom: 30px;\n}\n\n.project > * {\n  margin: 10px;\n}\n\n.description {\n  width: 50%;\n  float: left;\n}\n\n.demo {\n  width: 40%;\n}\n\n#contact.frame {\n  margin-bottom: 50px;\n}\n\n.card {\n  display: grid;\n  grid-template-columns: 30px auto;\n  gap: 10px;\n  margin-top: 70px;\n}\n\na:link {\n  color: black;\n  text-decoration: none;\n}\n\na:visited {\n  color: black;\n}\n\na:hover {\n  color: dimgray;\n}\n\n#footer {\n  position: absolute;\n  bottom: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n/*# sourceMappingURL=styles.css.map */\n", "",{"version":3,"sources":["webpack://./client/src/style/styles.scss","webpack://./client/src/style/styles.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,gEAAA;EACA,sBAAA;EACA,eAAA;ACCF;;ADEA;EACE,wCAAA;ACCF;;ADEA;EACE,eAAA;EACA,uBAAA;EACA,WAAA;EACA,YAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,uDAAA;EACA,aAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,YAAA;ACCF;;ADEA;EACE,iBAAA;EACA,aAAA;EACA,gBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,YAAA;EACA,+BAAA;EACA,iBAAA;EACA,cAAA;EACA,kBAAA;EACA,4BAAA;EACA,UAAA;EACA,uBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,wBAAA;EACA,UAAA;ACCF;;ADEA;EACE,eAAA;EACA,WAAA;EACA,QAAA;EACA,UAAA;ACCF;;ADEA;EACE,uBAAA;EACA,gBAAA;EACA,WAAA;EACA,UAAA;EACA,wBAAA;EACA,sCAAA;ACCF;;ADEA;EACE,mCAAA;ACCF;;ADEA;EACE,wBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,eAAA;EACA,kBAAA;EACA,SAAA;ACCF;;ADEA;EACE,WAAA;EACA,gBAAA;ACCF;;ADEA;EACE,YAAA;EACA,sBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,8BAAA;ACCF;;ADEA;EACE;IACE,UAAA;IACA,4BAAA;ECCF;EDCA;IACE,UAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;AACF;ADEA;EACE,YAAA;EACA,eAAA;EACA,oBAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,gBAAA;EACA,mBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,UAAA;EACA,WAAA;ACAF;;ADGA;EACE,UAAA;ACAF;;ADGA;EACE,mBAAA;ACAF;;ADGA;EACE,aAAA;EACA,gCAAA;EACA,SAAA;EACA,gBAAA;ACAF;;ADGA;EACE,YAAA;EACA,qBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,cAAA;ACAF;;ADGA;EACE,kBAAA;EACA,SAAA;EACA,cAAA;EACA,kBAAA;EACA,eAAA;ACAF;;AAEA,qCAAqC","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8875,7 +8907,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "22d10d1fe47fe9bf72036d8a2f10b8b0.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "8c2bd4389813ab8060ce5ca168781d07.png");
 
 /***/ }),
 
@@ -8889,7 +8921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "f0d78327a81ed464cf09166dcfbd315f.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "f6adaa793136f86890eaada778cb1618.png");
 
 /***/ }),
 
@@ -8903,7 +8935,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "d8a9c9344e92d0a660ba708bc65c1340.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "ab6ab8430e5eb0ff6a92b0bf89e66073.png");
+
+/***/ }),
+
+/***/ "./client/src/assets/martell1.png":
+/*!****************************************!*\
+  !*** ./client/src/assets/martell1.png ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "37d480a2e8320b0b302dfa805554e588.png");
+
+/***/ }),
+
+/***/ "./client/src/assets/martell2.png":
+/*!****************************************!*\
+  !*** ./client/src/assets/martell2.png ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "0ab94bdf73d5bb001056688222f252a3.png");
 
 /***/ }),
 
@@ -8918,6 +8978,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "ffe8bd4b1d48755818f9952e069e26d8.png");
+
+/***/ }),
+
+/***/ "./client/src/assets/watermelonCatch1.png":
+/*!************************************************!*\
+  !*** ./client/src/assets/watermelonCatch1.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "58be004c1870b75446295bc3a67f8ab5.png");
+
+/***/ }),
+
+/***/ "./client/src/assets/watermelonCatch2.png":
+/*!************************************************!*\
+  !*** ./client/src/assets/watermelonCatch2.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "a497d792e1ac7ce6f8e31b561fa4104d.png");
+
+/***/ }),
+
+/***/ "./client/src/assets/watermelonCatch3.png":
+/*!************************************************!*\
+  !*** ./client/src/assets/watermelonCatch3.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "272be7327dda590331a4ab7c3b676cd8.png");
 
 /***/ }),
 
