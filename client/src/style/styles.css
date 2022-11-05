@@ -139,8 +139,9 @@ a.project:link {
 }
 
 a.project {
-  display: block;
+  display: inline;
   grid-column: 1/3;
+  width: max-content;
 }
 
 .project > * {
