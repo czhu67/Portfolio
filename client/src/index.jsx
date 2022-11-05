@@ -5,9 +5,19 @@ import Title from "./components/title.jsx";
 import About from "./components/about.jsx";
 import Projects from "./components/projects.jsx";
 import Contact from "./components/contact.jsx";
+import Zoom from "./components/zoom.jsx";
 import './style/styles.css'
 
 var App = () => {
+  const [zoom, setZoom] = useState(false);
+  const [expanded, setExpanded] = useState({});
+  const [allPhotos] = useState({
+    celebwcait: ['celebwcait1.png', 'celebwcait2.png', 'celebwcait3.png'],
+    martell: ['martell1.png', 'martell2.png'],
+    watermelonCatch: ['watermelonCatch1.png', 'watermelonCatch2.png', 'watermelonCatch3.png'],
+    bell: ['mybell1.png']
+  });
+
   var updateDots = (node) => {
     if (node.style.backgroundColor === '') {
       node.style.backgroundColor = 'black';
@@ -50,7 +60,6 @@ var App = () => {
     }
     updateDots(document.getElementById(track.length));
   }
-
   window.addEventListener("scroll", reveal);
 
   return (
@@ -64,8 +73,9 @@ var App = () => {
       </div>
       <Title/>
       <About/>
-      <Projects/>
+      <Projects zoom={zoom} setZoom={setZoom} setExpanded={setExpanded} allPhotos={allPhotos}/>
       <Contact/>
+      {zoom ? <Zoom picture={expanded} setZoom={setZoom} allPhotos={allPhotos}/> : null}
     </div>
   );
 }

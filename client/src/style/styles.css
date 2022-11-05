@@ -131,20 +131,54 @@ a.project:link {
 
 .project {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 50%;
+  column-gap: 20px;
+}
+
+a.project {
+  display: block;
+  grid-column: 1/3;
 }
 
 .project > * {
   margin: 10px;
 }
 
+.carousel {
+  display: flex;
+  height: max-content;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+button {
+  background-color: transparent;
+  color: black;
+  height: 100%;
+  transform: scale(1, 2);
+  border: 0;
+  opacity: 50%;
+}
+
+button:hover {
+  opacity: 100%;
+}
+
 .description {
-  width: 50%;
+  width: auto;
   float: left;
 }
 
 .demo {
-  width: 40%;
+  width: 90%;
+}
+
+.demo:hover {
+  cursor: zoom-in;
 }
 
 #contact.frame {
@@ -177,6 +211,29 @@ a:hover {
   margin: 0 auto;
   text-align: center;
   font-size: 16px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomView {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.modalButtons {
+  color: white;
+  transform: scale(2, 4);
+  margin: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
