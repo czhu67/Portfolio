@@ -33,11 +33,11 @@ var App = () => {
     e.preventDefault();
     let scrollToPixel = 0;
     if (e.target.id === '2') {
-      scrollToPixel = document.querySelector('#title').clientHeight;
+      scrollToPixel = document.querySelector('#title').clientHeight + 50;
     } else if (e.target.id === '3') {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 5;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 55;
     } else if (e.target.id === '4') {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 10;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 60;
     }
     window.scrollTo(0, scrollToPixel);
   }

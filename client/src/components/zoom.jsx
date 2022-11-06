@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 var Zoom = (props) => {
   const [display, setDisplay] = useState(props.picture.photo);
+  const [showArrows, setShowArrows] = useState(false);
+
   var projectPics = props.allPhotos[props.picture.project];
 
-  console.log(props);
+  console.log(projectPics.length);
 
   return (
     <div className="modal" onClick={(e) => {
@@ -12,21 +14,21 @@ var Zoom = (props) => {
         props.setZoom(false);
       }
     }}>
-      <button className="modalButtons" onClick={() => {
+      {projectPics.length !== 1 ? <button className="modalButtons" onClick={() => {
         if (display === 0) {
           setDisplay(projectPics.length - 1);
         } else {
           setDisplay(display - 1);
         }
-      }}>{'<'}</button>
+      }}>{'<'}</button> : null}
       { display !== null? <img src={require(`../assets/${projectPics[display]}`).default} className="zoomView"/> : null}
-      <button className="modalButtons" onClick={() => {
+      {projectPics.length !== 1 ? <button className="modalButtons" onClick={() => {
         if (display === projectPics.length - 1) {
           setDisplay(0);
         } else {
           setDisplay(display + 1);
         }
-      }}>{'>'}</button>
+      }}>{'>'}</button> : null}
     </div>
   )
 };

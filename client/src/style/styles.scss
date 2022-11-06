@@ -32,6 +32,10 @@ body {
   width: fit-content;
 }
 
+.navbar {
+  cursor: default;
+}
+
 .frame {
   height: auto;
   min-height: calc(100vh - 270px);
@@ -173,6 +177,7 @@ button:hover {
 .description {
   width: auto;
   float: left;
+  margin-right: 50px;
 }
 
 .demo {

@@ -195,33 +195,36 @@ var Header = function Header() {
   var scroll = function scroll(num) {
     var scrollToPixel = 0;
     if (num === 2) {
-      scrollToPixel = document.querySelector('#title').clientHeight;
+      scrollToPixel = document.querySelector('#title').clientHeight + 50;
     } else if (num === 3) {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 5;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 55;
     } else if (num === 4) {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 10;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 60;
     }
     window.scrollTo(0, scrollToPixel);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "headerTitle",
+    className: "headerTitle navbar",
     onClick: function onClick() {
       return scroll(1);
     }
   }, "Caitlin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     onClick: function onClick() {
       return scroll(2);
-    }
+    },
+    className: "navbar"
   }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     onClick: function onClick() {
       return scroll(3);
-    }
+    },
+    className: "navbar"
   }, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     onClick: function onClick() {
       return scroll(4);
-    }
+    },
+    className: "navbar"
   }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
     value: {
       size: '30px',
@@ -267,7 +270,7 @@ var Projects = function Projects(props) {
     className: "project"
   }, "Celebrate With Cait"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "description"
-  }, "This is an ongoing personal project that I created to help with wedding planning logistics. It includes 3 main pages created using JavaScript, React, Webpack, and Sass. Some noteable features include the wedding day countdown, the budget \"progress\" bar, and the editable sticky-notes. In the future, I plan to implement authentication and connect a database so users can log in, use the app, and the data from the session can be saved for future sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "This is an ongoing personal project that I created to help with wedding planning logistics. It includes 3 main pages created using JavaScript, React, Webpack, and Sass. Some notable features include the wedding day countdown, the budget \"progress\" bar, and the editable sticky notes. In the future, I plan to implement authentication and connect a database so users can log in and use the app, and the data from the session can be saved for future sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: "celebwcait",
     photos: props.allPhotos.celebwcait,
     zoom: props.zoom,
@@ -282,7 +285,7 @@ var Projects = function Projects(props) {
     className: "project"
   }, "Je M'appelle Martell"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "description"
-  }, "Je M'appelle Martell is an e-commerce web application integrated with an existing RESTful API. My team of 4 broke the website down into 4 main components, and I took responsibility of the Overview section (pictured). This project involved sending GET/POST requests to the API using Axios, React Hooks, and CSS. I was particularly proud of implementing the zoom view, where users could click the image for a pop-up magnifying class. We operated on daily stand-up meetings and 2-day sprints, ultimately completing this front-end project in 2-3 weeks."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "Je M'appelle Martell is an e-commerce web application integrated with an existing RESTful API. My team of 4 broke the website down into 4 main components, and I took responsibility for the Overview section (pictured). This project involved sending GET/POST requests to the API using Axios, React Hooks, and CSS. I was particularly proud of implementing the zoom view, where users could click the image for a pop-up magnifying class. We operated on daily stand-up meetings and 2-day sprints, ultimately completing this front-end project in 2-3 weeks."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: "martell",
     photos: props.allPhotos.martell,
     zoom: props.zoom,
@@ -297,7 +300,7 @@ var Projects = function Projects(props) {
     className: "project"
   }, "Watermelon Catch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "description"
-  }, "Watermelon Catch is a single-player game, where the goal is to catch as many watermelons as you can before time runs out. This game was created using Phaser and HTML, and features sprite animations and multiple scenes."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "Watermelon Catch is a single-player game, where the goal is to catch as many watermelons as you can before time runs out. This game was created using Phaser and HTML and features sprite animations and multiple scenes."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_carousel_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: "watermelonCatch",
     photos: props.allPhotos.watermelonCatch,
     zoom: props.zoom,
@@ -379,8 +382,12 @@ var Zoom = function Zoom(props) {
     _useState2 = _slicedToArray(_useState, 2),
     display = _useState2[0],
     setDisplay = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    showArrows = _useState4[0],
+    setShowArrows = _useState4[1];
   var projectPics = props.allPhotos[props.picture.project];
-  console.log(props);
+  console.log(projectPics.length);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "modal",
     onClick: function onClick(e) {
@@ -388,7 +395,7 @@ var Zoom = function Zoom(props) {
         props.setZoom(false);
       }
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  }, projectPics.length !== 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "modalButtons",
     onClick: function onClick() {
       if (display === 0) {
@@ -397,10 +404,10 @@ var Zoom = function Zoom(props) {
         setDisplay(display - 1);
       }
     }
-  }, '<'), display !== null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, '<') : null, display !== null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: __webpack_require__("./client/src/assets sync recursive ^\\.\\/.*$")("./".concat(projectPics[display]))["default"],
     className: "zoomView"
-  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  }) : null, projectPics.length !== 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "modalButtons",
     onClick: function onClick() {
       if (display === projectPics.length - 1) {
@@ -409,7 +416,7 @@ var Zoom = function Zoom(props) {
         setDisplay(display + 1);
       }
     }
-  }, '>'));
+  }, '>') : null);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Zoom);
 
@@ -9060,7 +9067,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  scroll-behavior: smooth;\n  background-image: url(\"https://i.ibb.co/b5yJFGp/background.png\");\n  background-size: cover;\n  font-size: 20px;\n}\n\nbody {\n  font-family: \"Didact Gothic\", sans-serif;\n}\n\n#header {\n  position: fixed;\n  background-color: black;\n  width: 100%;\n  height: 50px;\n  top: 0;\n  left: 0;\n  display: grid;\n  grid-template-columns: auto 100px 100px 100px 60px 70px;\n  padding: 10px;\n  color: white;\n  z-index: 1;\n  align-items: center;\n  padding: 8px;\n}\n\n.headerTitle {\n  margin-left: 25px;\n  display: flex;\n  align-items: end;\n  width: fit-content;\n}\n\n.frame {\n  height: auto;\n  min-height: calc(100vh - 270px);\n  margin-left: 70px;\n  padding: 100px;\n  position: relative;\n  transform: translateY(150px);\n  opacity: 0;\n  transition: 1s all ease;\n  overflow: hidden;\n}\n\n.frame.active {\n  transform: translateY(0);\n  opacity: 1;\n}\n\n.pageTracker {\n  position: fixed;\n  width: 10px;\n  top: 43%;\n  left: 30px;\n}\n\n.tracker {\n  border: 1px solid black;\n  margin-top: 12px;\n  height: 8px;\n  width: 8px;\n  transform: rotate(45deg);\n  transition: transform 0.3s ease-in-out;\n}\n\n.tracker:hover {\n  transform: rotate(45deg) scale(1.5);\n}\n\n#title.frame {\n  transform: translateY(0);\n}\n\n#title {\n  margin-top: 70px;\n}\n\nh1 {\n  font-size: 130px;\n}\n\nh2 {\n  font-size: 80px;\n  width: fit-content;\n  margin: 0;\n}\n\n.bio {\n  width: 50vw;\n  margin-top: 30px;\n}\n\n.biopic {\n  float: right;\n  margin: -80px 0 0 80px;\n  max-height: 70vh;\n}\n\nh1#name, #welcome {\n  animation: 2s floatUp ease-out;\n}\n\n@keyframes floatUp {\n  0% {\n    opacity: 0;\n    transform: translateY(150px);\n  }\n  20% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n  100% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n}\n#welcome {\n  float: right;\n  font-size: 30px;\n  padding-right: 100px;\n}\n\na.project:link {\n  font-size: 30px;\n}\n\n.project {\n  margin-top: 30px;\n  margin-bottom: 60px;\n  overflow: hidden;\n  display: grid;\n  grid-template-columns: auto 50%;\n  column-gap: 20px;\n}\n\na.project {\n  display: inline;\n  grid-column: 1/3;\n  width: max-content;\n}\n\n.project > * {\n  margin: 10px;\n}\n\n.carousel {\n  display: flex;\n  height: max-content;\n  align-items: center;\n  align-self: center;\n  justify-self: center;\n}\n\nbutton {\n  background-color: transparent;\n  color: black;\n  height: 100%;\n  transform: scale(1, 2);\n  border: 0;\n  opacity: 50%;\n}\n\nbutton:hover {\n  opacity: 100%;\n}\n\n.description {\n  width: auto;\n  float: left;\n}\n\n.demo {\n  width: 90%;\n}\n\n.demo:hover {\n  cursor: zoom-in;\n}\n\n#contact.frame {\n  margin-bottom: 50px;\n}\n\n.card {\n  display: grid;\n  grid-template-columns: 30px auto;\n  gap: 10px;\n  margin-top: 70px;\n}\n\na:link {\n  color: black;\n  text-decoration: none;\n}\n\na:visited {\n  color: black;\n}\n\na:hover {\n  color: dimgray;\n}\n\n#footer {\n  position: absolute;\n  bottom: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n.modal {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.zoomView {\n  max-width: 70%;\n  max-height: 70%;\n}\n\n.modalButtons {\n  color: white;\n  transform: scale(2, 4);\n  margin: 10px;\n}\n\n/*# sourceMappingURL=styles.css.map */\n", "",{"version":3,"sources":["webpack://./client/src/style/styles.scss","webpack://./client/src/style/styles.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,gEAAA;EACA,sBAAA;EACA,eAAA;ACCF;;ADEA;EACE,wCAAA;ACCF;;ADEA;EACE,eAAA;EACA,uBAAA;EACA,WAAA;EACA,YAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,uDAAA;EACA,aAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,YAAA;ACCF;;ADEA;EACE,iBAAA;EACA,aAAA;EACA,gBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,YAAA;EACA,+BAAA;EACA,iBAAA;EACA,cAAA;EACA,kBAAA;EACA,4BAAA;EACA,UAAA;EACA,uBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,wBAAA;EACA,UAAA;ACCF;;ADEA;EACE,eAAA;EACA,WAAA;EACA,QAAA;EACA,UAAA;ACCF;;ADEA;EACE,uBAAA;EACA,gBAAA;EACA,WAAA;EACA,UAAA;EACA,wBAAA;EACA,sCAAA;ACCF;;ADEA;EACE,mCAAA;ACCF;;ADEA;EACE,wBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,eAAA;EACA,kBAAA;EACA,SAAA;ACCF;;ADEA;EACE,WAAA;EACA,gBAAA;ACCF;;ADEA;EACE,YAAA;EACA,sBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,8BAAA;ACCF;;ADEA;EACE;IACE,UAAA;IACA,4BAAA;ECCF;EDCA;IACE,UAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;AACF;ADEA;EACE,YAAA;EACA,eAAA;EACA,oBAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,aAAA;EACA,+BAAA;EACA,gBAAA;ACAF;;ADGA;EACE,eAAA;EACA,gBAAA;EACA,kBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;ACAF;;ADGA;EACE,6BAAA;EACA,YAAA;EACA,YAAA;EACA,sBAAA;EACA,SAAA;EACA,YAAA;ACAF;;ADGA;EACE,aAAA;ACAF;;ADGA;EACE,WAAA;EACA,WAAA;ACAF;;ADGA;EACE,UAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,mBAAA;ACAF;;ADGA;EACE,aAAA;EACA,gCAAA;EACA,SAAA;EACA,gBAAA;ACAF;;ADGA;EACE,YAAA;EACA,qBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,cAAA;ACAF;;ADGA;EACE,kBAAA;EACA,SAAA;EACA,cAAA;EACA,kBAAA;EACA,eAAA;ACAF;;ADGA;EACE,eAAA;EACA,OAAA;EACA,MAAA;EACA,QAAA;EACA,SAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACAF;;ADGA;EACE,cAAA;EACA,eAAA;ACAF;;ADGA;EACE,YAAA;EACA,sBAAA;EACA,YAAA;ACAF;;AAEA,qCAAqC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  scroll-behavior: smooth;\n  background-image: url(\"https://i.ibb.co/b5yJFGp/background.png\");\n  background-size: cover;\n  font-size: 20px;\n}\n\nbody {\n  font-family: \"Didact Gothic\", sans-serif;\n}\n\n#header {\n  position: fixed;\n  background-color: black;\n  width: 100%;\n  height: 50px;\n  top: 0;\n  left: 0;\n  display: grid;\n  grid-template-columns: auto 100px 100px 100px 60px 70px;\n  padding: 10px;\n  color: white;\n  z-index: 1;\n  align-items: center;\n  padding: 8px;\n}\n\n.headerTitle {\n  margin-left: 25px;\n  display: flex;\n  align-items: end;\n  width: fit-content;\n}\n\n.navbar {\n  cursor: default;\n}\n\n.frame {\n  height: auto;\n  min-height: calc(100vh - 270px);\n  margin-left: 70px;\n  padding: 100px;\n  position: relative;\n  transform: translateY(150px);\n  opacity: 0;\n  transition: 1s all ease;\n  overflow: hidden;\n}\n\n.frame.active {\n  transform: translateY(0);\n  opacity: 1;\n}\n\n.pageTracker {\n  position: fixed;\n  width: 10px;\n  top: 43%;\n  left: 30px;\n}\n\n.tracker {\n  border: 1px solid black;\n  margin-top: 12px;\n  height: 8px;\n  width: 8px;\n  transform: rotate(45deg);\n  transition: transform 0.3s ease-in-out;\n}\n\n.tracker:hover {\n  transform: rotate(45deg) scale(1.5);\n}\n\n#title.frame {\n  transform: translateY(0);\n}\n\n#title {\n  margin-top: 70px;\n}\n\nh1 {\n  font-size: 130px;\n}\n\nh2 {\n  font-size: 80px;\n  width: fit-content;\n  margin: 0;\n}\n\n.bio {\n  width: 50vw;\n  margin-top: 30px;\n}\n\n.biopic {\n  float: right;\n  margin: -80px 0 0 80px;\n  max-height: 70vh;\n}\n\nh1#name, #welcome {\n  animation: 2s floatUp ease-out;\n}\n\n@keyframes floatUp {\n  0% {\n    opacity: 0;\n    transform: translateY(150px);\n  }\n  20% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n  100% {\n    opacity: 1;\n    transform: translateY(0%);\n  }\n}\n#welcome {\n  float: right;\n  font-size: 30px;\n  padding-right: 100px;\n}\n\na.project:link {\n  font-size: 30px;\n}\n\n.project {\n  margin-top: 30px;\n  margin-bottom: 60px;\n  overflow: hidden;\n  display: grid;\n  grid-template-columns: auto 50%;\n  column-gap: 20px;\n}\n\na.project {\n  display: inline;\n  grid-column: 1/3;\n  width: max-content;\n}\n\n.project > * {\n  margin: 10px;\n}\n\n.carousel {\n  display: flex;\n  height: max-content;\n  align-items: center;\n  align-self: center;\n  justify-self: center;\n}\n\nbutton {\n  background-color: transparent;\n  color: black;\n  height: 100%;\n  transform: scale(1, 2);\n  border: 0;\n  opacity: 50%;\n}\n\nbutton:hover {\n  opacity: 100%;\n}\n\n.description {\n  width: auto;\n  float: left;\n  margin-right: 50px;\n}\n\n.demo {\n  width: 90%;\n}\n\n.demo:hover {\n  cursor: zoom-in;\n}\n\n#contact.frame {\n  margin-bottom: 50px;\n}\n\n.card {\n  display: grid;\n  grid-template-columns: 30px auto;\n  gap: 10px;\n  margin-top: 70px;\n}\n\na:link {\n  color: black;\n  text-decoration: none;\n}\n\na:visited {\n  color: black;\n}\n\na:hover {\n  color: dimgray;\n}\n\n#footer {\n  position: absolute;\n  bottom: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n.modal {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.zoomView {\n  max-width: 70%;\n  max-height: 70%;\n}\n\n.modalButtons {\n  color: white;\n  transform: scale(2, 4);\n  margin: 10px;\n}\n\n/*# sourceMappingURL=styles.css.map */\n", "",{"version":3,"sources":["webpack://./client/src/style/styles.scss","webpack://./client/src/style/styles.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,gEAAA;EACA,sBAAA;EACA,eAAA;ACCF;;ADEA;EACE,wCAAA;ACCF;;ADEA;EACE,eAAA;EACA,uBAAA;EACA,WAAA;EACA,YAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,uDAAA;EACA,aAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,YAAA;ACCF;;ADEA;EACE,iBAAA;EACA,aAAA;EACA,gBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,eAAA;ACCF;;ADEA;EACE,YAAA;EACA,+BAAA;EACA,iBAAA;EACA,cAAA;EACA,kBAAA;EACA,4BAAA;EACA,UAAA;EACA,uBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,wBAAA;EACA,UAAA;ACCF;;ADEA;EACE,eAAA;EACA,WAAA;EACA,QAAA;EACA,UAAA;ACCF;;ADEA;EACE,uBAAA;EACA,gBAAA;EACA,WAAA;EACA,UAAA;EACA,wBAAA;EACA,sCAAA;ACCF;;ADEA;EACE,mCAAA;ACCF;;ADEA;EACE,wBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,gBAAA;ACCF;;ADEA;EACE,eAAA;EACA,kBAAA;EACA,SAAA;ACCF;;ADEA;EACE,WAAA;EACA,gBAAA;ACCF;;ADEA;EACE,YAAA;EACA,sBAAA;EACA,gBAAA;ACCF;;ADEA;EACE,8BAAA;ACCF;;ADEA;EACE;IACE,UAAA;IACA,4BAAA;ECCF;EDCA;IACE,UAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;EDCA;IACE,UAAA;IACA,yBAAA;ECCF;AACF;ADEA;EACE,YAAA;EACA,eAAA;EACA,oBAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,aAAA;EACA,+BAAA;EACA,gBAAA;ACAF;;ADGA;EACE,eAAA;EACA,gBAAA;EACA,kBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;ACAF;;ADGA;EACE,6BAAA;EACA,YAAA;EACA,YAAA;EACA,sBAAA;EACA,SAAA;EACA,YAAA;ACAF;;ADGA;EACE,aAAA;ACAF;;ADGA;EACE,WAAA;EACA,WAAA;EACA,kBAAA;ACAF;;ADGA;EACE,UAAA;ACAF;;ADGA;EACE,eAAA;ACAF;;ADGA;EACE,mBAAA;ACAF;;ADGA;EACE,aAAA;EACA,gCAAA;EACA,SAAA;EACA,gBAAA;ACAF;;ADGA;EACE,YAAA;EACA,qBAAA;ACAF;;ADGA;EACE,YAAA;ACAF;;ADGA;EACE,cAAA;ACAF;;ADGA;EACE,kBAAA;EACA,SAAA;EACA,cAAA;EACA,kBAAA;EACA,eAAA;ACAF;;ADGA;EACE,eAAA;EACA,OAAA;EACA,MAAA;EACA,QAAA;EACA,SAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACAF;;ADGA;EACE,cAAA;EACA,eAAA;ACAF;;ADGA;EACE,YAAA;EACA,sBAAA;EACA,YAAA;ACAF;;AAEA,qCAAqC","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9777,11 +9784,11 @@ var App = function App() {
     e.preventDefault();
     var scrollToPixel = 0;
     if (e.target.id === '2') {
-      scrollToPixel = document.querySelector('#title').clientHeight;
+      scrollToPixel = document.querySelector('#title').clientHeight + 50;
     } else if (e.target.id === '3') {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 5;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + 55;
     } else if (e.target.id === '4') {
-      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 10;
+      scrollToPixel = document.querySelector('#title').clientHeight + document.querySelector('#about').clientHeight + document.querySelector('#projects').clientHeight + 60;
     }
     window.scrollTo(0, scrollToPixel);
   };
