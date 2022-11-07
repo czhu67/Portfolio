@@ -164,13 +164,12 @@ button {
   background-color: transparent;
   color: black;
   height: 100%;
-  transform: scale(1, 2);
+  transform: scale(1.5, 3);
   border: 0;
-  opacity: 50%;
 }
 
 button:hover {
-  opacity: 100%;
+  color: dimgray;
 }
 
 .description {
@@ -200,7 +199,6 @@ button:hover {
 
 a:link {
   color: black;
-  text-decoration: none;
 }
 
 a:visited {
