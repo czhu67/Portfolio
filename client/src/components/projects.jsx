@@ -8,7 +8,7 @@ var Projects = (props) => (
     <IconContext.Provider value={{size: '20px', margin: 0}}>
     <h2>PROJECTS</h2>
     <div id="celebwcait" className="project">
-      <a href="https://celebratewcait.herokuapp.com/" target="_blank" className="project">Celebrate With Cait<AiOutlineLink className="linkIcon"/></a>
+      <a href="https://github.com/czhu67/CelebrateWCait" target="_blank" className="project">Celebrate With Cait<AiOutlineLink className="linkIcon"/></a>
       <div className="description">This is an ongoing personal project that I created to help with wedding planning logistics. It includes 3 main pages created using JavaScript, React, Webpack, and Sass. Some notable features include the wedding day countdown, the budget "progress" bar, and the editable sticky notes. In the future, I plan to implement authentication and connect a database so users can log in and use the app, and the data from the session can be saved for future sessions.</div>
       <Carousel name="celebwcait" photos={props.allPhotos.celebwcait} zoom={props.zoom} setZoom={props.setZoom} setExpanded={props.setExpanded}/>
     </div>
