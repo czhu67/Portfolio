@@ -6,8 +6,6 @@ var Zoom = (props) => {
 
   var projectPics = props.allPhotos[props.picture.project];
 
-  console.log(projectPics.length);
-
   return (
     <div className="modal" onClick={(e) => {
       if (e.target.className === "modal") {
