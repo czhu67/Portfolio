@@ -82,7 +82,7 @@ body {
 }
 
 h1 {
-  font-size: 130px;
+  font-size: 20vh;
 }
 
 h2 {
@@ -242,6 +242,12 @@ a:hover {
   color: white;
   transform: scale(2, 4);
   margin: 10px;
+}
+
+@media (max-width: 800px) {
+  html {
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
